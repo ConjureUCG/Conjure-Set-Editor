@@ -1,4 +1,4 @@
-﻿
+
 has keywords: true
 
 ####################################### Keyword modes
@@ -60,7 +60,7 @@ keyword:
 	keyword: Absolute
 	match: Absolute
 	mode: core
-	reminder: Absolute — This card can only be played or arrive to the Field if its mana cost is paid.
+	reminder: Absolute — This card can only be played or Arrive to the Field if its Mana Cost is paid.
 
 keyword:
 	keyword: Airborne
@@ -72,13 +72,13 @@ keyword:
 	keyword: Amalgam
 	match: Amalgam
 	mode: core
-	reminder: Amalgam - When you play this card you may sacrifice any number of Field Cards that share a card Sub-Type with this card, if you do, subtract the sacrificed cards mana cost from this card's mana cost.
+	reminder: Amalgam - When you play this card you may sacrifice any number of Field Cards that share a card Sub-Type with this card, if you do, subtract the sacrificed cards Mana Cost from this card's Mana Cost.
 
 keyword:
 	keyword: Amass
 	match: Amass <atom-param>name</atom-param>
 	mode: core
-	reminder: Amass {param1} — For each mana in this card’s mana cost you may lock an unlocked Field card that is a {param1} to pay for a mana in the cost of a matching color to that card’s own color or 1 colorless mana.
+	reminder: Amass {param1} — For each mana in this card’s Mana Cost you may Lock an Unlocked Field Card that is a {param1} to pay for a mana in the cost of a matching color to that card’s own color or 1 colorless mana.
 
 keyword:
 	keyword: Arrive
@@ -126,7 +126,7 @@ keyword:
 	keyword: Coalesce
 	match: Coalesce
 	mode: core
-	reminder: Coalesce — Whenever an Essence arrives under your control, ...
+	reminder: Coalesce — Whenever an Essence Arrives under your control, ...
 
 keyword:
 	keyword: Decayed
@@ -147,16 +147,22 @@ keyword:
 	reminder: Domain — If this card is your Lord you may have an additional Lord card as long as it's a {english_singular(param1)} card.
 
 keyword:
+	keyword: Elevate
+	match: Elevate
+	mode: core
+	reminder: Elevate - You may pay any additional Elevate costs when you play this card. If you do, add the Elevate cost to the Mana Cost of the card until that card leaves the Stack. The additional Elevate modes resolve in order.
+
+keyword:
 	keyword: Dredge
 	match: Dredge
 	mode: core
-	reminder: Dredge — You may banish any number of cards from your Grave when you play this card or use this ability. If you do, each card you banish pays for <sym>1</sym> in the mana cost.
+	reminder: Dredge — You may Banish any number of cards from your Grave when you play this card or use this ability. If you do, each card you Banish pays for <sym>1</sym> in the Mana Cost.
 
 keyword:
 	keyword: Emissary
 	match: Emissary
 	mode: core
-	reminder: Emissary — When this card arrives, Donate it. This card can't attack or block its owner or cards its owner controls.
+	reminder: Emissary — When this card Arrives, Donate it. This card can't attack or block its owner or cards its owner controls.
 
 keyword:
 	keyword: Empower
@@ -312,7 +318,7 @@ keyword:
 	keyword: Shielded
 	match: Shielded
 	mode: core
-	reminder: Shielded — This card arrives with a Shield counter.
+	reminder: Shielded — This card Arrives with a Shield counter.
 
 keyword:
 	keyword: Snare
@@ -330,25 +336,31 @@ keyword:
 	keyword: Steadfast
 	match: Steadfast
 	mode: core
-	reminder: Steadfast — This Character can block if it's locked.
+	reminder: Steadfast — This Character can block if it's Locked.
 
 keyword:
 	keyword: Sustain
 	match: Sustain <atom-param>number</atom-param>
 	mode: core
-	reminder: Sustain — Whenever this card deals damage, you gain {param1} times that much life.
+	reminder: Sustain — Whenever this card deals damage, you gain {param1} times that much Life.
 
 keyword:
 	keyword: Sustain
 	match: Sustain
 	mode: core
-	reminder: Sustain — Whenever this card deals damage, you gain that much life.
+	reminder: Sustain — Whenever this card deals damage, you gain that much Life.
 
 keyword:
 	keyword: Swift
 	match: Swift
 	mode: core
-	reminder: Swift — This Character can attack and activate lock abilities the turn it's played.
+	reminder: Swift — This Character can attack and activate Lock abilities the turn it's played.
+
+keyword:
+	keyword: Taunt
+	match: Taunt <atom-param>number</atom-param>
+	mode: core
+	reminder: Taunt {param1} - Whenever this Character attacks, it must be blocked at least {param1} additional times if able.
 
 keyword:
 	keyword: Taunt
@@ -360,7 +372,7 @@ keyword:
 	keyword: Thaumaturge
 	match: Thaumaturge
 	mode: core
-	reminder: Thaumaturge — This Character can only be blocked by Characters with Arcane, if this Character is blocked, compare each Character’s Arcane and destroy the one with less Arcane. If not, this Character deals Battle damage equal to its Arcane.
+	reminder: Thaumaturge - This Character can only be blocked by Characters with Arcane, if this Character is blocked, compare each Character’s Arcane and destroy the one with less Arcane. If not, this Character deals Battle damage equal to its Arcane.
 
 keyword:
 	keyword: Toughened
@@ -434,7 +446,7 @@ keyword:
 	keyword: Foretell
 	match: Foretell <atom-param>number</atom-param>
 	mode: keyterm
-	reminder: Foretell {param1} — Look at the top {param1} cards of your Deck, you may put any number of them on the bottom of your deck. Put the rest on top of your deck in any order.
+	reminder: Foretell {param1} — Look at the top {param1} cards of your Deck, you may put any number of them on the bottom of your Deck. Put the rest on top of your Deck in any order.
 
 keyword:
 	keyword: Foretell
@@ -458,13 +470,25 @@ keyword:
 	keyword: Heal
 	match: Heal
 	mode: keyterm
-	reminder: Heal — The next time this card would be destroyed or dealt damage this turn, instead don't. If it's in Battle, remove it from Battle and lock it.
+	reminder: Heal — The next time this card would be destroyed or dealt damage this turn, instead don't. If it's in Battle, remove it from Battle and Lock it.
+
+keyword:
+	keyword: Ignite
+	match: Ignite <atom-param>number</atom-param>
+	mode: keyterm
+	reminder: Ignite {param1} — Suspend the top {param1} cards of your Deck. You may play them this turn. If you don’t, put them in your Grave.
+
+keyword:
+	keyword: Ignite
+	match: Ignite
+	mode: keyterm
+	reminder: Ignite — Suspend the top card of your Deck. You may play it this turn. If you don’t, put it in your Grave.
 
 keyword:
 	keyword: Recall
 	match: Recall
 	mode: keyterm
-	reminder: Recall — You may play this card from your Grave, then banish it.
+	reminder: Recall — You may play this card from your Grave, then Banish it.
 
 keyword:
 	keyword: Recover
@@ -517,6 +541,12 @@ keyword:
 ####################################### Counters
 
 keyword:
+	keyword: Color counter
+	match: Color counter
+	mode: counter
+	reminder: Color counter — Color counters correspond to the colors of Conjure. Only existing colors may be chosen for Color counters (Red, Orange, Yellow, Green, Blue, Indigo, Violet). Color counters, on their own, don’t do anything innately.
+
+keyword:
 	keyword: Shield counter
 	match: Shield counter
 	mode: counter
@@ -526,10 +556,11 @@ keyword:
 	keyword: Impede counter
 	match: Impede counter
 	mode: counter
-	reminder: Impede counter — If a Field Card with an Impede counter would unlock, instead remove 1 Impede counter from that card and don’t unlock it.
+	reminder: Impede counter — If a Field Card with an Impede counter would Unlock, instead remove 1 Impede counter from that card and don’t Unlock it.
 
 keyword:
 	keyword: Seal counter
 	match: Seal counter
 	mode: counter
-	reminder: Seal counter — Any Field Card with a Seal counter can’t activate abilities, have abilities trigger, attack, block, or unlock. Each Onset the active player removes a Seal counter from each card they control.
+	reminder: Seal counter — Any Field Card with a Seal counter can’t activate abilities, have abilities trigger, attack, block, or Unlock. Each Onset the active player removes a Seal counter from each card they control.
+
